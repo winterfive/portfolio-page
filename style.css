@@ -140,7 +140,7 @@ a {
 
 .project-tile img {
   max-width: 400px;
-  margin: 40px 40px 0 40px;
+  margin: 10px 40px 0 40px;
   border-radius: 3%;
   border: solid 3px transparent;
 }
@@ -179,6 +179,7 @@ a {
 
 #about-statement {
   max-width: 400px;
+  padding-bottom: 40px;
 }
 
 ul {
@@ -223,7 +224,7 @@ footer {
   }
 
   #projects {
-    padding: 20% 0 20% 0;
+    padding: 10px 0 10px 0;
     flex-flow: column wrap;
   }
 
@@ -236,15 +237,13 @@ footer {
   .overlay {
     max-width: 80%;
   }
-
-  #about-div {
-    margin: 0 auto;
-    width: 100%;
-    font-size: 0.8em;
+  
+  ul {
+    margin-right: 20px;
   }
 }
 
-@media screen and (max-width: 1096px) {
+@media screen and (max-width: 1096px) and (min-width: 501px) {
   #about {
     flex-direction: column;
     align-items: center;
@@ -253,6 +252,5 @@ footer {
 
   #about-statement {
     max-width: 600px;
-    padding-bottom: 40px;
   }
 }
