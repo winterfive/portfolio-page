@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
 :root {
-  --text-color: #ececec;
+  --text-color: #ececec;  /* light gray */
+  --link-color: #535353;  /* dark gray */
   --background-anim-timer: 30s;
-  --change-color1: #000753;  /* dark blue */
-  --change-color2: #044836;  /* dark green */
-  --change-color3: #3f0250;  /* dark magenta */
-  --change-color4: #500202;  /* dark red */  
-}
-
-html {
-  
+  --change-color1: #000753; /* dark blue */
+  --change-color2: #044836; /* dark green */
+  --change-color3: #3f0250; /* dark magenta */
+  --change-color4: #500202; /* dark red */
+  --black: #121212;
 }
 
 body {
@@ -23,28 +21,49 @@ body {
   align-items: center;
 }
 
-@keyframes colorchange
-{
-  0%   {background: var(--change-color1);}
-  33%  {background: var(--change-color2);}
-  66%  {background: var(--change-color3);}
-  100%  {background: var(--change-color4);}
+@keyframes colorchange {
+  0% {
+    background: var(--change-color1);
+  }
+  33% {
+    background: var(--change-color2);
+  }
+  66% {
+    background: var(--change-color3);
+  }
+  100% {
+    background: var(--change-color4);
+  }
 }
 
-@-webkit-keyframes colorchange /* Safari, Opera and Chrome */
-{
-  0%   {background: var(--change-color1);}
-  33%  {background: var(--change-color2);}
-  66%  {background: var(--change-color3);}
-  100%  {background: var(--change-color4);}
+@-webkit-keyframes colorchange {
+  0% {
+    background: var(--change-color1);
+  }
+  33% {
+    background: var(--change-color2);
+  }
+  66% {
+    background: var(--change-color3);
+  }
+  100% {
+    background: var(--change-color4);
+  }
 }
 
-@-moz-keyframes colorchange /* Firefox */
-{
-  0%   {background: var(--change-color1);}
-  33%  {background: var(--change-color2);}
-  66%  {background: var(--change-color3);}
-  100%  {background: var(--change-color4);}
+@-moz-keyframes colorchange {
+  0% {
+    background: var(--change-color1);
+  }
+  33% {
+    background: var(--change-color2);
+  }
+  66% {
+    background: var(--change-color3);
+  }
+  100% {
+    background: var(--change-color4);
+  }
 }
 
 #welcome-section {
@@ -58,14 +77,14 @@ body {
 }
 
 h1 {
-  max-width: 40%;
+  max-width: 55%;
   padding-top: 30%;
   padding-left: 5%;
   margin: 0 auto;
 }
 
 #name {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 1em;
   position: relative;
   bottom: -0.1em;
@@ -78,9 +97,9 @@ h1 {
 #navbar {
   position: fixed;
   background-color: var(--text-color);
-  top: 10px;
-  right: 40px;
-  width: 450px;
+  top: 20px;
+  right: 20px;
+  width: 400px;
   height: 35px;
   border-radius: 40px;
   display: flex;
@@ -90,13 +109,17 @@ h1 {
 }
 
 a {
-  color: #021b5d;
+  color: var(--link-color);
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.7em;
+}
+
+#navbar a:hover {
+  border-bottom: solid 2px var(--link-color);
 }
 
 #projects {
-  background-color: #121212;
+  background-color: var(--black);
   padding: 150px 0 150px 0;
   width: 100%;
   display: flex;
@@ -106,32 +129,120 @@ a {
 }
 
 .project-tile img {
-  border-radius: 3%;
   max-width: 370px;
-  margin: 30px;
+  border-radius: 3%;
+  margin: 50px 40px 0 40px;
+  border: solid 3px transparent;
+}
+
+.project-tile img:hover {
+  border: solid 3px var(--text-color);
 }
 
 .overlay {
-  
+  max-width: inherit;
+  opacity: 0;
+  background-color: var(--black);
 }
 
-#education {
+.project-tile:hover .overlay {
+  opacity: 1;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.project-text {
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: var(--text-color);
+  margin-top: -3px;
+}
+
+.project-text-small {
+  font-family: sans-serif;
+  font-size: 0.7em;
+  color: var(--text-color);
+}
+
+#about {
   width: 100%;
-  height: 500px;
-  background-color: #44025d;
+  height: auto;
+  padding: 80px 0 80px 0;
+  background-color: var(--change-color1);
+}
+
+#about-div {
+  margin: 0 auto;
+  width: 60%;
+  font-size: 0.8em;
+}
+
+#about-statement {
+  margin-bottom: 60px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+li a {
+  color: var(--text-color);
+  font-size: 1.0em;
+  border-bottom: solid 2px var(--text-color);
+}
+
+li a:hover {
+  background-color: var(--text-color);
+  color: var(--link-color);
 }
 
 footer {
   width: 100%;
   height: 500px;
-  background-color: #5d0248;
+  background-color: var(--change-color3);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-@media and screen and (max-width: 400px) {
+@media screen and (max-width: 475px) {
+  body {
+  font-size: 1.0em;
+  }
   
-}
+  #navbar {
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 
+  h1 {
+    width: 70%;
+    padding-top: 50%;
+    padding-left: 5%;
+    margin: 0 auto;
+  }
+  
+  #projects {
+  padding: 100px 0 100px 0;
+  flex-flow: column wrap;
+  }
+  
+  #about-div {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 0.8em;
+  }
+  
+  .project-tile img {
+  width: 90%;
+  }
+}
