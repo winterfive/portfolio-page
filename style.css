@@ -11,6 +11,10 @@
   --black: #121212;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text-color);
   font-size: 1.2em;
@@ -19,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 @keyframes colorchange {
@@ -64,6 +69,14 @@ body {
   100% {
     background: var(--change-color4);
   }
+}
+
+.row-wrap-center {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 #welcome-section {
@@ -122,11 +135,6 @@ a {
 #projects {
   background-color: var(--black);
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
 }
 
 .project-tile img {
@@ -162,24 +170,14 @@ a {
 
 #about {
   width: 100%;
-  height: auto;
-  display: flex;
-  padding: 100px 0 100px 0;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   font-size: 0.8em;
   line-height: 1.4em;
   background-color: var(--change-color1);
 }
 
-.list-div {
-  max-width: 650px;
+ul {
+  max-width: 600px;
   font-size: 0.9em;
-}
-
-#about-statement {
-  margin-bottom: 60px;
 }
 
 li {
@@ -188,8 +186,8 @@ li {
 }
 
 li a {
-  color: var(--text-color);
   font-size: 1em;
+  color: var(--text-color);
   border-bottom: solid 2px var(--text-color);
 }
 
@@ -202,13 +200,9 @@ footer {
   width: 100%;
   height: 500px;
   background-color: var(--change-color3);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 500px) {
   body {
     font-size: 1em;
   }
@@ -222,7 +216,7 @@ footer {
   }
 
   #projects {
-    padding: 40% 0 40% 0;
+    padding: 20% 0 20% 0;
     flex-flow: column wrap;
   }
 
