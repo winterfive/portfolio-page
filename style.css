@@ -13,7 +13,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 body {
@@ -228,6 +228,11 @@ footer a:hover {
   #navbar {
     width: 100%;
   }
+  
+  .highlight {
+    background-color: red;
+    font-family: serif;
+  }
 
   h1 {
     max-width: 70%;
@@ -247,7 +252,7 @@ footer a:hover {
   .overlay {
     max-width: 80%;
   }
-  
+
   ul {
     margin-right: 20px;
   }
