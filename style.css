@@ -207,8 +207,17 @@ li a:hover {
 
 footer {
   width: 100%;
-  height: 500px;
   background-color: var(--change-color3);
+}
+
+.footer-link {
+  padding: 30px;
+  margin: 20px;
+}
+
+footer a:hover {
+  background-color: #000;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 500px) {
