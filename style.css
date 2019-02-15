@@ -99,6 +99,10 @@ h1 {
   margin: 0 auto;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 #name {
   font-family: "Press Start 2P", cursive;
   font-size: 1em;
@@ -142,8 +146,11 @@ a {
 .project-tile img {
   max-width: 400px;
   margin: 10px 40px 0 40px;
+  border: 3px solid var(--black);
   border-radius: 3%;
-  border: solid 3px transparent;
+  transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -webkit-transition: border .25s ease-in-out;
 }
 
 .project-tile img:hover {
@@ -151,19 +158,22 @@ a {
 }
 
 .overlay {
-  max-width: 370px;
+  max-width: 370px;  
+  margin: 0 auto;
   opacity: 0;
   background-color: var(--black);
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 
 .project-tile:hover .overlay {
   opacity: 1;
-  margin: 0 auto;
 }
 
 .project-text {
   font-size: 0.8em;
-  margin-top: -3px;
+  margin-top: 1px;
 }
 
 .project-text-small {
@@ -172,21 +182,29 @@ a {
 
 #about {
   width: 100%;
-  font-size: 0.8em;
-  line-height: 1.4em;
+  font-size: 0.9em;
+  line-height: 1.5em;
   background-color: var(--change-color1);
   align-items: flex-start;
 }
 
-#about-statement {
+.about-statement {
   max-width: 400px;
   padding-bottom: 40px;
+}
+
+#education {
+  margin-top: 30px;
+}
+
+#education li {
+  margin-bottom: 30px;
 }
 
 ul {
   max-width: 600px;
   font-size: 0.9em;
-  line-height: 1.8em;
+  line-height: 2em;
   margin: 0px 10px 0 -10px;
 }
 
@@ -198,11 +216,18 @@ li a {
   font-size: 1em;
   color: var(--text-color);
   border-bottom: solid 2px var(--text-color);
+  -o-transition: background.5s ease;
+  -ms-transition: background .5s ease;
+  -moz-transition: background .5s ease;
+  -webkit-transition: background .5s ease;
+  transition: background .5s ease;
 }
 
 li a:hover {
-  background-color: var(--text-color);
+  background: var(--text-color);
   color: var(--link-color);
+  padding-top: 2px;
+  
 }
 
 footer {
@@ -210,14 +235,21 @@ footer {
   background-color: var(--change-color3);
 }
 
-.footer-link {
+footer a {
   padding: 30px;
   margin: 20px;
 }
 
-footer a:hover {
-  background-color: #000;
+footer .link-bg {
   border-radius: 50%;
+  background-color: var(--change-color3);
+  transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -webkit-transition: background-color .5s ease-in-out;
+}
+
+footer .link-bg:hover {
+  background-color: var(--black);
 }
 
 @media screen and (max-width: 500px) {
@@ -256,9 +288,13 @@ footer a:hover {
   ul {
     margin-right: 20px;
   }
+  
+  #about {
+    padding: 50px 0 30px 0;
+  }
 }
 
-@media screen and (max-width: 1096px) and (min-width: 501px) {
+@media screen and (max-width: 1296px) and (min-width: 501px) {
   #about {
     flex-direction: column;
     align-items: center;
@@ -266,6 +302,7 @@ footer a:hover {
   }
 
   #about-statement {
-    max-width: 600px;
+    max-width: 700px;
+    margin-bottom: 30px;
   }
 }
