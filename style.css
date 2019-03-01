@@ -139,14 +139,14 @@ a {
 }
 
 #projects {
-  background-color: var(--black);
+  background-color: var(--change-color2);
   width: 100%;
 }
 
 .project-tile img {
   max-width: 400px;
   margin: 10px 40px 0 40px;
-  border: 3px solid var(--black);
+  border: 3px solid var(--change-color2);
   border-radius: 3%;
   transition: border .25s ease-in-out;
   -moz-transition: border .25s ease-in-out;
@@ -161,7 +161,7 @@ a {
   max-width: 370px;  
   margin: 0 auto;
   opacity: 0;
-  background-color: var(--black);
+  background-color: var(--change-color2);
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
@@ -283,6 +283,10 @@ footer .link-bg:hover {
 
   .overlay {
     max-width: 80%;
+  }
+  
+  #about-statement {
+    margin-bottom: 40px;
   }
 
   ul {
