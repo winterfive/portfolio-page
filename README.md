@@ -4,4 +4,4 @@ A portfolio page, created as my final project for Free Code Camp's Responsive De
 
 This project can be viewed at: https://codepen.io/CodeMoo/pen/dwqXpL#
 
-![Image of Lee's Portfolio Page, project section](https://user-images.githubusercontent.com/22779199/53745924-161f8580-3e6e-11e9-9372-85fde8171826.png)
+![Image of Lee's Portfolio Page, project section](https://user-images.githubusercontent.com/22779199/54439583-74225780-470f-11e9-91be-f5b76f6dbd40.png)
